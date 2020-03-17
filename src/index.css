@@ -103,12 +103,19 @@ footer {
   height: 56px;
   background-color: black;
   color: #fff;
-  font-size: 16px;
+  font-size: 13px;
+  text-align: center;
   
 }
 @media screen and (max-width: 992px) {
   .whatsNewDiv h2 {
-    font-size: 20px;
+    font-size: 16px;
+  }
+  .Home h1{
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    font-size: 30px;
   }
 }
 

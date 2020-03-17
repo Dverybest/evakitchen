@@ -17,9 +17,9 @@ const Contact = () => {
                 <div className='transparentDiv d-flex flex-column'>
                     <div> <h1>Contact Me</h1></div>
                     <div className="form container  flex-column d-flex flex-grow-1 my-5">
-                        <div className='row'>
-                            <div className='col-md-7 card'>
-                                <form className='py-5'>
+                        <div className='row px-3'>
+                            <div className='col-md-7 card '>
+                                <form className='py-3'>
                                     <div className='form-row'>
                                         <div className="form-group col">
                                             <input type="text" class="form-control" id="email" placeholder="Enter Name" name="email" />
@@ -51,7 +51,7 @@ const Contact = () => {
                                     <div className="d-flex align-content-center justify-content-center" style={{fontSize:20,color:'#fff'}}>
                                         <p><i className="fa fa-phone" ></i>  +2347061011343</p>
                                     </div>
-                                    <div className="d-flex align-content-center justify-content-center" style={{fontSize:20,color:'#fff'}}>
+                                    <div className="d-flex align-content-center justify-content-center" style={{fontSize:20,color:'#fff',textAlign:'center'}}>
                                         <p><i className="fa fa-envelope-o" ></i>  evakitchen@gmail.com</p>
                                     </div>
                                  </div>
