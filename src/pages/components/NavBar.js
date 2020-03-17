@@ -19,10 +19,10 @@ const NavBar = ({navColor}) => {
                     <Link to='/' className="nav-link mx-3">Home</Link>
                 </li>
                 <li className="nav-item">
-                    <Link to='/Best-Headlines/sports' className="nav-link mx-3">About</Link>
+                    <Link to='/About' className="nav-link mx-3">About</Link>
                 </li>
                 <li className="nav-item">
-                    <Link to='/Best-Headlines/technology'  className="nav-link mx-3">Recipes</Link>
+                    <Link to='/Recipes'  className="nav-link mx-3">Recipes</Link>
                 </li>
                 <li className="nav-item">
                     <Link to='/Contact' className="nav-link mx-3">Contact</Link>
