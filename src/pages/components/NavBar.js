@@ -4,9 +4,9 @@ import {Link, withRouter } from 'react-router-dom';
 const NavBar = ({navColor}) => {
 
     return (
-        <nav className="navbar navbar-expand-sm navb fixed-top" style={{background:navColor}}>
+        <nav className="navbar navbar-expand-sm navb sticky-top" style={{background:navColor}}>
             <div>
-                <Link to='/' className="navbar-brand">EVA_KITCHEN</Link>
+                <Link to='/' className="navbar-brand">EVA-KITCHEN</Link>
             </div>
             {/* <!-- Toggler/collapsibe Button --> */}
             <button  className="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -21,9 +21,9 @@ const NavBar = ({navColor}) => {
                 <li className="nav-item">
                     <Link to='/About' className="nav-link mx-3">About</Link>
                 </li>
-                <li className="nav-item">
+                {/* <li className="nav-item">
                     <Link to='/Recipes'  className="nav-link mx-3">Recipes</Link>
-                </li>
+                </li> */}
                 <li className="nav-item">
                     <Link to='/Contact' className="nav-link mx-3">Contact</Link>
                 </li>

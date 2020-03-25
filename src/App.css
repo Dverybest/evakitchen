@@ -7,7 +7,7 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
@@ -34,5 +34,68 @@
   }
   to {
     transform: rotate(360deg);
+  }
+} */
+
+.jumbotron{
+  margin-bottom:0px;
+  background-color: transparent;
+}
+.darken{
+  background-color: rgba(0, 0, 0, 0.8);
+  background-size: cover;
+}
+.jumbotron p{
+  color: #ffffff;
+}
+.post img{
+  width: 100%;
+  height: 350px;
+  max-width: 100%;
+  object-fit: cover;
+}
+.about header{
+  background-image: url(./assets/bgImage1.jpg); 
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.abouthead{
+  /* background-color: #474e5d; */
+  background-color:rgba(0, 0, 0, 0.7);
+  background-size: cover;
+  color: #ffffff;
+}
+.abouthead p{
+  color: #ffffff;
+}
+.about img{
+  height: auto;
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  
+}
+.aboutBody{
+  min-height: calc(100vh - 112px);
+  background-size: cover;
+  background-color: #f0f0f0;
+}
+
+@media screen and (max-width: 996px) {
+  .about img{
+    height: 230px;
+    width: 230px;
+    border-radius: 50%;
+    object-fit: cover;
+    
+  }
+  .about h2{
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
   }
 }

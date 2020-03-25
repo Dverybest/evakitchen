@@ -12,8 +12,8 @@ const Contact = () => {
     })
     return (
         <div className="Contact d-flex flex-column">
-            <div className='contactMe '>
             <Navbar navColor={navColor} />
+            <div className='contactMe '>
                 <div className='transparentDiv d-flex flex-column'>
                     <div> <h1>Contact Me</h1></div>
                     <div className="form container  flex-column d-flex flex-grow-1 my-5">
@@ -60,9 +60,10 @@ const Contact = () => {
                         </div>
 
                     </div>
-            <Footer/>
+           
                 </div>
             </div>
+                <Footer/>
         </div>
     )
 }
