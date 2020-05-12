@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-export const Article = ({ link, title, source}) => {
+export const Article = ({ link, title, source,id}) => {
     return (
-        <div className="row card post mb-3">
+        <div className="row card post mb-3" key={id}>
             {
                 source.includes('.jpg') || source.includes('.png')|| source.includes('.jpeg') ? (
-                    <img src={source} />
+                    <img src={source} alt=""/>
                 ) : (
                         <iframe width="100%" height="300px"
                             src={source}>
@@ -28,10 +28,10 @@ export const Article = ({ link, title, source}) => {
     );
 }
 
-export const ListItem = ({ active, link, name }) => {
+export const ListItem = ({ active, link, name,id }) => {
 
     return (
-        <li className="nav-item">
+        <li className="nav-item" key={id}>
             <Link className={active ? "active nav-link" : "nav-link"} to={link}>{name}</Link>
         </li>
     )

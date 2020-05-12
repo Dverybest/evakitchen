@@ -52,16 +52,29 @@ const HomePage = (props) => {
                         <div className="col-sm-9">
                             <div className="container mt-3">
                                 {
-                                    articles.map(art => {
+                                    articles.map((art,index) => {
                                         return (
-                                            <Article source={art.source} title={art.title} />
+                                            <Article source={art.source} title={art.title} id={index} link={'#'} />
                                         )
                                     })
                                 }
                             </div>
                         </div>
                         <div className="col-sm-3">
-                                
+                            <div>
+                                <h4 className="mt-2 bg-info text-light px-1 py-2">Recipe categories</h4>
+                                <p>Our amazing recipes .</p>
+                                <ul className="nav nav-pills flex-column">
+                                    {
+                                        categories.map((category,index) => {
+                                            return (
+                                                <ListItem name={category.name} id={index} link={`/${category.name}`} active={props.location.pathname == `/${category.name}`} />
+                                            )
+                                        })
+                                    }
+                                </ul>
+                                <hr className="d-sm-none" />
+                            </div>
                         </div>
                     </div>
                 </div>
