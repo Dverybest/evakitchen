@@ -12,7 +12,7 @@ import Footer from './components/Footer';
 
 const HomePage = (props) => {
 
-    const [navColor, setNavColor] = useState('#000000');
+    const [navColor, setNavColor] = useState('transparent');
     // const whatsNew = useRef();
     const [categories, setCategories] = useState([
         { name: 'Egusi Soup', },

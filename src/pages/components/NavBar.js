@@ -13,7 +13,7 @@ const NavBar = ({navColor}) => {
     }
     return (
         <div>
-            <nav className="d-flex justify-content-between align-items-center sticky" id="nav-bar" style={{ background: navColor }}>
+            <nav className="d-flex justify-content-between align-items-center sticky" id="nav-bar" style={{ background: navColor||'transparent' }}>
             <div className="logo">
                 <Link className="nav-link" to='/'>EVA-KITCHEN</Link>
             </div>
@@ -25,14 +25,14 @@ const NavBar = ({navColor}) => {
                     <li><Link to="/contact-us"
                         className="nav-link">CONTACT-US</Link></li>
                 </ul>
-                <Link to="javascript:void(0)" className="icon mr-3"
-                    onClick={openNav}>&#9776;</Link>
+                <span className="icon mr-3"
+                    onClick={openNav}>&#9776;</span>
             </nav>
             <div id="mySidenav"
                 className="sidenav">
-                <Link to="javascript:void(0)"
+                <span
                     className="closebtn"
-                    onClick={closeNav}>&times;</Link>
+                    onClick={closeNav}>   &times;</span>
                 <Link to="/"
                     className="nav-link">HOME</Link>
                 <Link to="/about-us"
