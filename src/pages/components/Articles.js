@@ -1,12 +1,10 @@
-import React, { useEffect, } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { inherits } from '@babel/types';
-
 export const Article = ({ link, title, source}) => {
     return (
         <div className="row card post mb-3">
             {
-                source.includes('.jpg') || source.includes('.png') ? (
+                source.includes('.jpg') || source.includes('.png')|| source.includes('.jpeg') ? (
                     <img src={source} />
                 ) : (
                         <iframe width="100%" height="300px"

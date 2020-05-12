@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState,} from 'react';
 import Navbar from './components/NavBar';
 import cook from '../assets/cook.png';
 import soup from '../assets/img3.jpg';
@@ -7,13 +7,13 @@ import ora from '../assets/img7.jpg';
 import CustomView from '../pages/components/CustomView';
 import {Article, ListItem} from './components/Articles'
 import Footer from './components/Footer';
-import { Link, withRouter } from 'react-router-dom';
+// import { Link, withRouter } from 'react-router-dom';
 
 
 const HomePage = (props) => {
 
     const [navColor, setNavColor] = useState('#000000');
-    const whatsNew = useRef();
+    // const whatsNew = useRef();
     const [categories,setCategories] = useState([
         {name:'Egusi Soup',},
         {name:'Jellof Rice',},
@@ -34,10 +34,10 @@ const HomePage = (props) => {
             setNavColor(backgroundcolor);
         });
     })
-    const handleClick = (e) => {
-        e.preventDefault();
-        whatsNew.current.scrollIntoView({ behavior: 'smooth' })
-    }
+    // const handleClick = (e) => {
+    //     e.preventDefault();
+    //     whatsNew.current.scrollIntoView({ behavior: 'smooth' })
+    // }
     return (
         <div className="Home container-fluid px-0">
             <div className="darken" >
@@ -80,7 +80,7 @@ const HomePage = (props) => {
                                    {
                                        articles.map(art=>{
                                            return(
-                                                <Article source={art.source} title={art.title}/>
+                                                <Article source={`https://homepages.cae.wisc.edu/~ece533/images/airplane.png`} title={art.title}/>
                                            )
                                        })
                                    }

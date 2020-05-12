@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Navbar from './components/NavBar'
 import Footer from './components/Footer'
 import Me from '../assets/me.jpg'
-import { hidden } from 'ansi-colors';
+
 const About = () => {
     const [navColor, setNavColor] = useState('#000000')
 
@@ -32,7 +32,7 @@ const About = () => {
                         <div className=" d-flex justify-content-center align-content-center my-3">
 
                            
-                            <img src={Me}   />
+                            <img src={Me}  alt="food" />
                            
                         
                         </div>
