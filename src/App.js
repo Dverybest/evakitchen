@@ -13,8 +13,8 @@ const App = () => {
       <div className='container-fluid mx-0 px-0'>
         <Switch>
           <Route exact path='/admin' component={Login} />
-          <Route exact path='/contact' component={Contact} />
-          <Route exact path='/about' component={About} />
+          <Route exact path='/contact-us' component={Contact} />
+          <Route exact path='/about-us' component={About} />
           <Route exact path='/admin-dashboard' component={AdminDashboard} />
           <Route exact path='/' component={HomePage} />
         </Switch>
