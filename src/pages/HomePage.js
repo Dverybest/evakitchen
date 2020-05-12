@@ -50,7 +50,7 @@ const HomePage = (props) => {
                 <div className="container mt-3">
                     <div className="row">
                         <div className="col-sm-9">
-                            
+                            <div className="container">
                                 {
                                     articles.map((art,index) => {
                                         return (
@@ -58,7 +58,7 @@ const HomePage = (props) => {
                                         )
                                     })
                                 }
-                            
+                            </div>
                         </div>
                         <div className="col-sm-3">
                             <div>
