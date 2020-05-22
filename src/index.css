@@ -5,7 +5,7 @@ html {
 body {
   margin: 0;
   background-color: #eeeeee;
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-family: 'Comic Neue',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -67,6 +67,7 @@ span{
 }
 .closebtn {
    font-size: 30px !important;
+   margin: 30px;
 }
 .sticky{
   position: fixed;
@@ -100,6 +101,7 @@ footer {
   background-color: black;
   color: #fff;
   font-size: 13px;
+  font-family: 'Comic Neue';
   text-align: center;
   position: relative;
   bottom: 0;

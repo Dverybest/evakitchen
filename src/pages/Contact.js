@@ -11,59 +11,42 @@ const Contact = () => {
         });
     })
     return (
-        <div className="Contact d-flex flex-column">
+        <div classNameName="Contact d-flex flex-column">
             <Navbar navColor={navColor} />
-            <div className='contactMe '>
-                <div className='transparentDiv d-flex flex-column'>
-                    <div> <h1>Contact Me</h1></div>
-                    <div className="form container  flex-column d-flex flex-grow-1 my-5">
-                        <div className='row px-3'>
-                            <div className='col-md-7 card '>
-                                <form className='py-3'>
-                                    <div className='form-row'>
-                                        <div className="form-group col">
-                                            <input type="text" class="form-control" id="email" placeholder="Enter Name" name="email" />
-                                        </div>
-                                        <div className="form-group col">
-                                            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" />
-                                        </div>
-                                    </div>
-                                    <div className="form-group">
+            <section className="contact"
+                id="contact">
+                <h2>CONTACT US</h2>
+                <p>
+                    Catering Services | Consultancy and Training for School
+                    and Businesses
+            </p>
+                <p className="contact-address">We are just a call/mail away.
+                Get in touch with us and experience a boost in your busines</p>
+                <p>Email : <a href="mailto:dverybest8@gmail.com?Subject=Hello"
+                    target="_top">dverybest8@gmail.com</a></p>
+                <p>Phone : <a href="tel:07061011343">07061011343</a></p>
 
-                                        <textarea name="message" cols="40" rows="10" className=" form-control"
-                                            aria-required="true" aria-invalid="false" placeholder="Your Message"></textarea>
-                                    </div>
-                                    
-
-                                    <button type="submit" class="btn btn-primary form-control">Submit</button>
-                                    
-                                </form>
-                            </div>
-                            <div className='col-md-5 px-5 my-5'>
-                                 <div >
-                                    <h4 className='d-flex align-content-center justify-content-around text-center' style={{fontSize:25,color:'#fff'}}>STAY CONNECTED</h4>
-                                    <div className="line row mx-1"></div>
-                                 <div className="d-flex align-content-center justify-content-around my-3">
-                                     <span ><a href="https://www.facebook.com/bestinol"><i className="fa fa-facebook-square"></i></a></span>
-                                    <span > <a href="https://www.twitter.com/"><i className="fa fa-twitter-square" style={{color:'white'}}></i></a></span>
-                                    <span> <a href="https://www.twitter.com/"><i className="fa fa-youtube-play" style={{color:'red'}}></i></a></span>
-                                 </div>
-                                    <div className="d-flex align-content-center justify-content-center" style={{fontSize:20,color:'#fff'}}>
-                                        <i className="fa fa-phone" ></i>  +2347061011343
-                                    </div>
-                                    <div className="d-flex align-content-center justify-content-center" style={{fontSize:20,color:'#fff',textAlign:'center'}}>
-                                        <i className="fa fa-envelope-o mr-2" ></i>   evakitchen@gmail.com
-                                    </div>
-                                 </div>
-                                    
-                            </div>
-                        </div>
-
-                    </div>
-           
-                </div>
+                <div className="form-div">
+                    <form action="#"
+                        id="form">
+                        <fieldset>
+                            <legend>Subscribe to our monthly news-letter</legend>
+                            <input className="input-field mr-1"
+                                type="email"
+                                required
+                                id="email"
+                                placeholder="enter your email"
+                                name="email" />
+                            <input className="input-field"
+                                type="submit"
+                                disabled
+                                id="submit"
+                                name="submit"/>
+                    </fieldset>
+                </form>
             </div>
-                <Footer/>
+        </section>
+        <Footer/>
         </div>
     )
 }

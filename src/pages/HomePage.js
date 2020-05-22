@@ -3,9 +3,10 @@ import Navbar from './components/NavBar';
 import cook from '../assets/cook.png';
 import soup from '../assets/img3.jpg';
 import rice from '../assets/img1.jpg';
-import ora from '../assets/img7.jpg';
-import CustomView from '../pages/components/CustomView';
+// import ora from '../assets/img7.jpg';
+// import CustomView from '../pages/components/CustomView';
 import { Article, ListItem } from './components/Articles'
+
 import Footer from './components/Footer';
 
 
@@ -68,7 +69,7 @@ const HomePage = (props) => {
                                     {
                                         categories.map((category,index) => {
                                             return (
-                                                <ListItem name={category.name} id={index} link={`/${category.name}`} active={props.location.pathname == `/${category.name}`} />
+                                                <ListItem name={category.name} id={index} link={`/${category.name}`} active={props.location.pathname === `/${category.name}`} />
                                             )
                                         })
                                     }

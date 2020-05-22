@@ -15,30 +15,24 @@ const About = () => {
 
     return (
         <div className="about ">
-           <header>
-           <div className="abouthead text-center py-5">
-                <h1>More About Us</h1>
-                <p>Eva-Kitchen</p>
-            </div>
-           </header>
             <Navbar navColor={navColor} />
             <div className="aboutBody">
             
             <div className="whatsNewDiv">
                 <div className="container ">
-                    <div className="container card py-5">
+                    <div className="container">
                     <div className="row ">
-                    <div className="col-sm-4 px-2">
+                    <div className="col-sm-4">
                         <div className=" d-flex justify-content-center align-content-center my-3">
 
                            
-                            <img src={Me}  alt="food" />
+                            <img src={Me}  alt="" />
                            
                         
                         </div>
                     </div>
                         <div className="col-sm-8 ">
-                            <div className="d-flex flex-column  justify-content-center align-content-center mx-2 " style={{height:"100%"}}>
+                            <div className="d-flex flex-column  justify-content-center align-content-center " style={{height:"100%"}}>
                             <h2>About Eva-Kitchen</h2>
                             <p> Redundant alt attribute. Screen-readers already announce `img` 
                                 tags as an image. You don’t need to use the words `image`, `photo,` or `picture` (or any specified custom words) in the alt prop</p>

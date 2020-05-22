@@ -32,7 +32,7 @@ const NavBar = ({navColor}) => {
                 className="sidenav">
                 <span
                     className="closebtn"
-                    onClick={closeNav}>   &times;</span>
+                    onClick={closeNav}>&times;</span>
                 <Link to="/"
                     className="nav-link">HOME</Link>
                 <Link to="/about-us"
@@ -41,35 +41,6 @@ const NavBar = ({navColor}) => {
                     className="nav-link">CONTACT-US</Link>
             </div>
         </div>
-        // <nav classNameName="navbar navbar-expand-sm navb sticky-top" style={{background:navColor}}>
-        //     <div>
-        //         <Link to='/' classNameName="navbar-brand">EVA-KITCHEN</Link>
-        //     </div>
-        //     {/* <!-- Toggler/collapsibe Button --> */}
-        //     <button  classNameName="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-        //         <span  classNameName="navbar-toggler-icon"></span>
-        //     </button>
-            
-        //     <div  classNameName="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
-        //     <ul  classNameName="navbar-nav ">
-        //         <li  classNameName="nav-item">
-        //             <Link to='/' classNameName="nav-link mx-3">Home</Link>
-        //         </li>
-        //         <li classNameName="nav-item">
-        //             <Link to='/About' classNameName="nav-link mx-3">About</Link>
-        //         </li>
-        //         {/* <li classNameName="nav-item">
-        //             <Link to='/Recipes'  classNameName="nav-link mx-3">Recipes</Link>
-        //         </li> */}
-        //         <li classNameName="nav-item">
-        //             <Link to='/Contact' classNameName="nav-link mx-3">Contact</Link>
-        //         </li>
-        //         {/* <li classNameName="nav-item">
-        //             <Link to='/Best-Headlines/health'  classNameName="nav-link">Health</Link>
-        //         </li> */}
-        //     </ul>
-        //     </div>
-        // </nav>
     )
 }
 export default withRouter(NavBar);
