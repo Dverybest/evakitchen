@@ -1,0 +1,11 @@
+.recipe-form{
+    max-width: 500px;
+    margin: auto;
+}
+.dashboard .header{
+    text-transform: uppercase;
+}
+.dashboard .layout{
+    min-height: calc(100vh - 56px);
+    padding-top: 60px;
+}

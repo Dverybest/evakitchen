@@ -1,0 +1,42 @@
+.login{
+  min-height: 100vh;
+  background-color: #fff;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.login form{
+  margin: auto;
+  max-width: 500px;
+}
+
+.login h1{
+  margin: 0px 0px 100px;
+  font-weight: bold;
+}
+.login p{
+  color: #999999;
+  margin: 0px 0px 140px;
+}
+.login input{
+  height: 50px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.login button{
+  height: 50px;
+  max-width: 350px;
+}
+@media screen and (max-width: 500px) {
+  .login h1{
+  margin: 0px 0px 30px;
+  font-weight: bold;
+    font-size: 30px;
+  }
+.login p{
+  color: #999999;
+  margin: 0px 0px 140px;
+}
+}

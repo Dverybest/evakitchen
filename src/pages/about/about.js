@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import Navbar from './components/NavBar'
-import Footer from './components/Footer'
-import Me from '../assets/me.jpg'
-
+import Navbar from '../components/NavBar'
+import Footer from '../components/Footer'
+import Me from '../../assets/me.jpg'
+import './about.css'
 const About = () => {
     const [navColor, setNavColor] = useState('#000000')
 

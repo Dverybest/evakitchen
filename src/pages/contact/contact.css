@@ -1,0 +1,28 @@
+.contact{
+  padding: 120px 10px 30px 10px;
+  min-height:calc(100vh - 50px);
+  display: flex;
+  color: #fff;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: linear-gradient(115deg, rgba(5, 5, 5, 0.9),
+         rgba(0, 0, 0, 0.8)), url(../../assets/cook.png);
+}
+.contact h2{
+  margin-bottom: 30px;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.contact-addres {
+      margin-top: 20px;
+}
+.contact a {
+     color: rgba(255, 255, 225, 1);
+     text-decoration: underline;
+}

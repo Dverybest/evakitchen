@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from 'react';
-import Navbar from './components/NavBar'
-import Footer from './components/Footer'
+import Navbar from '../components/NavBar'
+import Footer from '../components/Footer'
+import './contact.css'
 const Contact = () => {
     const [navColor, setNavColor] = useState('#000000')
 

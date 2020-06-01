@@ -1,5 +1,5 @@
 //const localUrl ="http://localhost:5000/";
 // const liveUrl ="";
-const baseUrl ="http://localhost:5000/";
+const baseUrl ="https://staging-evakitchenapi.herokuapp.com";
 
 export default baseUrl;

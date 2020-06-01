@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import axios from 'axios';
-import baseUrl from '../api/config'
+import {connect} from 'react-redux';
+import {LoginAuthentication }from '../../../store/actions/AuthAction'
+import "./adminLogin.css";
 
 const Login = (props) => {
     const [isLoading, setIsLoading] = useState(false)
@@ -8,10 +9,7 @@ const Login = (props) => {
     const [error, setError] = useState('');
     const [password, setPassword] = useState('');
     
-    const headers = {
-        "Access-Control-Allow-Origin": "*",
-        "Content-Type": "application/json",
-    }
+   
     const login =(email,password)=>{
 
         setIsLoading(true);
@@ -19,21 +17,17 @@ const Login = (props) => {
             email:email,
             password:password
         }
-        axios.post(`${baseUrl}users/signin`,data,{headers})
-        .then(result=>{
-            console.log('result',result);
-            if(result.data.success){
-                props.history.push('/admin-dashboard');
-            }else{
-                setError(result.data.message)
-            }
-        })
-        .catch(error=>{
-            console.log('error',error);
-        })
-        .finally(()=>{
+        props.LoginAuthentication(data).then(result=>{
+            // console.log('result', result);
             setIsLoading(false);
+            props.history.push('/admin-dashboard');
+
+        }).catch(error => {
+           // console.log('error', error);
+            setIsLoading(false);
+            setError(error.message)
         })
+       
     }
 
     const handleChange = (e) => {
@@ -109,4 +103,4 @@ const Login = (props) => {
     )
 }
 
-export default Login;
+export default connect(null, { LoginAuthentication })(Login);

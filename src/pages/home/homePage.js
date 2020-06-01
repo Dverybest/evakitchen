@@ -1,13 +1,11 @@
 import React, { useEffect, useState, } from 'react';
-import Navbar from './components/NavBar';
-import cook from '../assets/cook.png';
-import soup from '../assets/img3.jpg';
-import rice from '../assets/img1.jpg';
-// import ora from '../assets/img7.jpg';
-// import CustomView from '../pages/components/CustomView';
-import { Article, ListItem } from './components/Articles'
+import Navbar from '../components/NavBar';
+import cook from '../../assets/cook.png';
+import soup from '../../assets/img3.jpg';
+import './homePage.css'
+import { Article, ListItem } from '../components/Articles'
 
-import Footer from './components/Footer';
+import Footer from '../components/Footer';
 
 
 
