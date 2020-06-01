@@ -1,6 +1,5 @@
 import axios from 'axios';
-import baseUrl  from './Config'
-import { reject } from 'q';
+import baseUrl  from './Config.js';
 
 axios.defaults.baseURL = baseUrl;
 axios.defaults.headers["Accept"] = "application/json";
