@@ -1,5 +1,5 @@
 import axios from 'axios';
-import baseUrl  from './Config.js';
+import baseUrl  from './config';
 
 axios.defaults.baseURL = baseUrl;
 axios.defaults.headers["Accept"] = "application/json";
