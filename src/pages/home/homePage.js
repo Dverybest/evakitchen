@@ -28,7 +28,7 @@ const HomePage = (props) => {
     return (
         <div className="Home container-fluid px-0">
             <Navbar navColor={navColor} />
-            <div className="jumbotron text-center d-flex flex-column align-items-center" >
+            <div className="jumbotron text-center align-items-center" >
                 <img src={cook} id="cook-img" alt="" className="align-self-center" />
                 <h1>Discover the best of African dishes</h1>
                 <p>View our delicious meal recipes</p>
