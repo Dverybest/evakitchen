@@ -7,34 +7,53 @@
   -o-background-size: cover;
   background-size: cover;
 }
-.abouthead{
-  /* background-color: #474e5d; */
-  background-color:rgba(0, 0, 0, 0.7);
+.about_header{
+  padding: 120px 40px 30px 40px;
+  height: 70vh;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-position: top;
+  background-repeat: no-repeat;
   background-size: cover;
-  color: #ffffff;
+  background-image: linear-gradient(115deg, rgba(5, 5, 5, 0.8),
+         rgba(0, 0, 0, 0.8)), url(../../assets/contact.jpg);
 }
-.abouthead p{
-  color: #ffffff;
+.about_header h1{
+  font-family:'Inter',sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 40px;
+  letter-spacing: 0.5em;
+  color: #FFFFFF;
+}
+.about_header p{
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 60px;
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
+  max-width: 500px;
+}
+
+.about_body{
+    font-family: 'Open Sans',sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 40px;
+    color: #000000;
 }
 .about img{
   height: auto;
   width: 100%;
   object-fit: cover;
 }
-.aboutBody{
-padding: 120px 10px 30px 10px;
-  min-height: calc(100vh - 50px);
-  display: flex;
-  text-align: center;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* background-image: linear-gradient(115deg, rgba(5, 5, 5, 0.8),
-                    rgba(0, 0, 0, 0.9)), url(../../assets/cook.png); */
-}
+
 @media screen and (max-width: 996px) {
   .about img{
     height: 230px;
@@ -42,9 +61,17 @@ padding: 120px 10px 30px 10px;
     object-fit: cover;
     
   }
-  .about h2{
-    font-size: 30px;
-    font-weight: 500;
-    text-align: center;
-  }
 } 
+@media (max-width: 900px) {
+  .about_header h1{
+    font-size: 14px;
+  }
+  .about_header p{
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .about_body{
+      font-size: 16px;
+      line-height: 30px;
+  }
+}

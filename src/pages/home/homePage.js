@@ -35,8 +35,9 @@ const HomePage = (props) => {
             </div>
             <main>
                 <div className="container mt-3">
-                    <h2>Popular Recipes</h2>
-                    <p className="sub_heading">Our most viewed recipes</p>
+                    
+                    <h2>Recent Recipes</h2>
+                    <p className="sub_heading">Our most recently added recipes</p>
                     <div className="row px-0 mx-0">
                         <div className="">
                             <div>
@@ -54,8 +55,8 @@ const HomePage = (props) => {
                         </div> */}
                     </div>
 
-                    <h2>Recent Recipes</h2>
-                    <p className="sub_heading">Our most recently added recipes</p>
+                    <h2>Popular Recipes</h2>
+                    <p className="sub_heading">Our most viewed recipes</p>
                     <div className="row px-0 mx-0">
                         <div className="">
                             <div>

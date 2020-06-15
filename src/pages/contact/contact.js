@@ -23,28 +23,28 @@ const Contact = () => {
                 <h2>Let’s get in touch </h2>
                 <div className="row">
                     <div className="col-md-8">
-                        <form>
+                        <form method="post" action="/contact-us">
                             <div className="contact_form_group">
                                 <div className="contact_input_div">
                                     <label htmlFor="firstname">First Name</label>
-                                    <input type="text" name="firstname" id="firstname" />
+                                    <input type="text" name="firstname" id="firstname" required/>
                                 </div>
                                 <div className="contact_input_div">
                                     <label htmlFor="lastname">Last Name</label>
-                                    <input type="text" name="lastname" id="lastname" />
+                                    <input type="text" name="lastname" id="lastname" required/>
                                 </div>
                             </div>
                             <div className="contact_input_div">
                                 <label htmlFor="email">Email</label>
-                                <input type="email" name="email" id="email" />
+                                <input type="email" name="email" id="email" required/>
                             </div>
                             <div className="contact_input_div">
                                 <label htmlFor="subject">Subject</label>
-                                <input type="text" name="subject" id="subject" />
+                                <input type="text" name="subject" id="subject" required/>
                             </div>
                             <div className="contact_input_div">
                                 <label htmlFor="message">Message</label>
-                                <textarea cols="5" rows ="10" type="text" name="message" id="message"></textarea>
+                                <textarea cols="5" rows="10" type="text" name="message" id="message" required></textarea>
                             </div>
                             <div className="contact_input_div">
                                 <button>Leave us a message</button>
