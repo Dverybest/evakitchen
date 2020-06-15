@@ -11,11 +11,14 @@ const NavBar = ({navColor}) => {
     const closeNav=() =>{
         document.getElementById("mySidenav").style.width = "0";
     }
+    const handleNavClick =(e,name)=>{
+
+    }
     return (
         <div>
-            <nav className="d-flex justify-content-between align-items-center sticky" id="nav-bar" style={{ background: navColor||'transparent' }}>
+            <nav className="" id="nav-bar" style={{ background: navColor||'transparent' }}>
             <div className="logo">
-                <Link className="nav-link" to='/'>EVA-KITCHEN</Link>
+                <Link id="logo" className="nav-link" to='/'>EVA-KITCHEN</Link>
             </div>
                 <ul>
                     <li><Link to="/"
@@ -24,9 +27,18 @@ const NavBar = ({navColor}) => {
                         className="nav-link">ABOUT-US</Link></li>
                     <li><Link to="/contact-us"
                         className="nav-link">CONTACT-US</Link></li>
+                    <li>
+                        <div className="dropdown">
+                            <button className="dropbtn">CATEGORIES <i className="fa fa-caret-down"></i></button>
+                            <div className="dropdown-content">
+                                <a href="/" onClick={(e) => handleNavClick(e, 'view-category')}>View Category</a>
+                                <a href="/" onClick={(e) => handleNavClick(e, 'add-category')}>Add Category</a>
+
+                            </div>
+                        </div>
+                    </li>
                 </ul>
-                <span className="icon mr-3"
-                    onClick={openNav}>&#9776;</span>
+                <span className="fa fa-bars icon mr-3" style={{ fontSize: 25 }} onClick={openNav}></span>
             </nav>
             <div id="mySidenav"
                 className="sidenav">
@@ -39,6 +51,14 @@ const NavBar = ({navColor}) => {
                     className="nav-link">ABOUT-US</Link>
                 <Link to="/contact-us"
                     className="nav-link">CONTACT-US</Link>
+                <div className="dropdown">
+                    <button className="dropbtn">CATEGORIES <i className="fa fa-caret-down"></i></button>
+                    <div className="dropdown-content">
+                        <a href="/" onClick={(e) => handleNavClick(e, 'view-category')}>View Category</a>
+                        <a href="/" onClick={(e) => handleNavClick(e, 'add-category')}>Add Category</a>
+
+                    </div>
+                </div>
             </div>
         </div>
     )

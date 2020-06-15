@@ -18,18 +18,18 @@ const NavBar = ({ navColor,callback }) => {
 
                 <div id="nav-links">
                     <div className="dropdown">
-                        <button className="dropbtn">Recipe <i class="fa fa-caret-down"></i></button>
+                        <button className="dropbtn">Recipe <i className="fa fa-caret-down"></i></button>
                         <div className="dropdown-content">
-                            <a href="#" onClick={(e) => handleNavClick(e, 'view-recipe')}>View Recipe</a>
-                            <a href="#" onClick={(e) => handleNavClick(e, 'add-recipe')}>Add Recipe</a>  
+                            <a href="/" onClick={(e) => handleNavClick(e, 'view-recipe')}>View Recipe</a>
+                            <a href="/" onClick={(e) => handleNavClick(e, 'add-recipe')}>Add Recipe</a>  
                             
                         </div>
                     </div>
                     <div className="dropdown">
-                        <button className="dropbtn">Categories <i class="fa fa-caret-down"></i></button>
+                        <button className="dropbtn">Categories <i className="fa fa-caret-down"></i></button>
                         <div className="dropdown-content">
-                            <a href="#" onClick={(e) => handleNavClick(e, 'view-category')}>View Category</a>
-                            <a href="#" onClick={(e) => handleNavClick(e, 'add-category')}>Add Category</a>
+                            <a href="/"  onClick={(e) => handleNavClick(e, 'view-category')}>View Category</a>
+                            <a href="/"  onClick={(e) => handleNavClick(e, 'add-category')}>Add Category</a>
 
                         </div>
                     </div>
@@ -45,20 +45,20 @@ const NavBar = ({ navColor,callback }) => {
             <div className="mobile-nav-links">
                 <div id="navSideBar" style={{width: openNav?"250px":'0px'}}>
                     <div className="dropdown">
-                        <button className="dropbtn">Recipe <i class="fa fa-caret-down"></i></button>
+                        <button className="dropbtn">Recipe <i className="fa fa-caret-down"></i></button>
                         <div className="dropdown-content">
-                            <a href="#" onClick={(e)=>handleNavClick(e,'view-recipe')}>View Recipe</a>
+                            <a href="/" onClick={(e)=>handleNavClick(e,'view-recipe')}>View Recipe</a>
                             <hr/>
-                            <a href="#" onClick={(e) => handleNavClick(e, 'add-recipe')}>Add Recipe</a>   
+                            <a href="/" onClick={(e) => handleNavClick(e, 'add-recipe')}>Add Recipe</a>   
                         </div>
                         <hr />
                     </div>
                     <div className="dropdown">
-                        <button className="dropbtn">Categories <i class="fa fa-caret-down"></i></button>
+                        <button className="dropbtn">Categories <i className="fa fa-caret-down"></i></button>
                         <div className="dropdown-content">
-                            <a href="#" onClick={(e) => handleNavClick(e, 'view-category')}>View Category</a>
+                            <a href="/" onClick={(e) => handleNavClick(e, 'view-category')}>View Category</a>
                             <hr />
-                            <a href="#" onClick={(e) => handleNavClick(e, 'add-category')}>Add Category</a>
+                            <a href="/" onClick={(e) => handleNavClick(e, 'add-category')}>Add Category</a>
                         </div>
                         <hr />
                     </div>

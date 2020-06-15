@@ -6,7 +6,7 @@ export const handleAddRecipe = (payload) => {
         let requestProcessor = new RequestProcessor();
         requestProcessor.sendPost('/post/addpost', payload).then(result => {
 
-            console.log("add recp res", result)
+            // console.log("add recp res", result)
             if (result.success) {
                 resolve({ success: result.success, message: result.message });
             } else {
@@ -25,10 +25,10 @@ export const handleGetCategory = () => {
     return (dispatch, getState) => new Promise((resolve, reject) => {
         let requestProcessor = new RequestProcessor();
         requestProcessor.sendGet('/category/getallcategories').then(result => {
-            console.log("get cat res", result)
+            // console.log("get cat res", result)
             resolve({ success: result.success, data: result.data });
         }).catch(error => {
-            console.log("get cat error", error)
+            // console.log("get cat error", error)
             reject({ success: false, message: error.message })
         });
     });

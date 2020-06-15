@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import Navbar from '../components/Navbar';
 import { connect } from 'react-redux';
 import './adminDashboard.css';
@@ -16,8 +16,6 @@ const AdminDashboard = (props) => {
           props.history.push('/admin');
     }
     const navCallback = (e, name) => {
-        console.log(name);
-       
         switch (name) {
             case 'view-category':
                 getAllCategories();
@@ -31,7 +29,7 @@ const AdminDashboard = (props) => {
         setView(name);
     }
     const getAllCategories = ()=>{
-        props.handleGetCategory().then(result => {
+        handleGetCategory().then(result => {
             setCategories(result.data)
         }).catch(error => {
             setError(error.message)
@@ -44,7 +42,7 @@ const AdminDashboard = (props) => {
             <Navbar callback={navCallback} />
             <div className="container layout">
                 {
-                    view == 'add-recipe' ?
+                    view === 'add-recipe' ?
                         <AddRecipe 
                             view={view} 
                             handleAddRecipe={props.handleAddRecipe} 
@@ -53,10 +51,10 @@ const AdminDashboard = (props) => {
                             isLoading={isLoading} 
                             setIsLoading={setIsLoading} />
                         :
-                        view == 'add-category' ?
+                        view === 'add-category' ?
                             <AddCategory view={view} handleAddCategory={props.handleAddCategory} />
                             :
-                            view == 'view-category' ?
+                            view === 'view-category' ?
                                 <ViewCategory view={view} categories={categories} error={error} isLoading={isLoading} />
                                 :
                                 <></>
@@ -106,7 +104,7 @@ const AddRecipe = ({ view, categories, err, isLoading, handleAddRecipe }) => {
         data.append('content', payload.content);
         data.append('category', payload.category);
    
-        handleAddRecipe(data) .then(result => {
+        handleAddRecipe(data).then(result => {
                 setSuccess(result.message)
             }).catch(error => {
                setError(error.message)
@@ -188,7 +186,7 @@ const AddCategory = ({ view, handleAddCategory }) => {
     }
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (category.length == 0) {
+        if (category.length === 0) {
             return setError("please fill all fields")
         }
         let payload = { name: category }
@@ -297,4 +295,4 @@ const mapStateToProps = (state) => {
         userDetails: state.auth.userDetails,
     }
 }
-export default connect(mapStateToProps, { handleAddCategory, handleGetCategory, handleAddRecipe })(AdminDashboard);
+export default connect(mapStateToProps, { handleAddCategory, handleAddRecipe })(AdminDashboard);

@@ -22,13 +22,13 @@ export const handleAddCategory = (payload)=>{
 
 export const handleGetCategory = () => {
 
-    return (dispatch, getState) => new Promise((resolve, reject) => {
+    return new Promise((resolve, reject) => {
         let requestProcessor = new RequestProcessor();
         requestProcessor.sendGet('/category/getallcategories').then(result => {
-            console.log("get cat res", result)
+            //  console.log("get cat res", result)
             resolve({ success: result.success, data: result.data });
         }).catch(error => {
-            console.log("get cat error", error)
+            //  console.log("get cat error", error)
             reject({ success: false, message: error.message })
         });
     });
