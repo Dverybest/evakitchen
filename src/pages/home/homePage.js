@@ -78,9 +78,9 @@ const HomePage = (props) => {
                                             <div>
                                                 {
                                                     articles.map((art, index) => {
-                                                        // console.log("art",art)
                                                         return (
-                                                            <Article key={`article${index}`} mediaUrl={art.imageurl || art.videourl} title={art.title} id={index} link={'#'} />
+                                                            <Article key={`article${index}`} mediaUrl={art.imageurl || art.videourl}
+                                                                title={art.title} id={index} link={art._id} history={props.history} />
                                                         )
                                                     })
                                                 }
