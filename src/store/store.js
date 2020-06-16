@@ -7,13 +7,13 @@ const ConfigureStore = ()=>{
     try {
         assumedState = sessionStorage.getItem("_eva_kitchen")? JSON.parse(sessionStorage.getItem("_eva_kitchen")):{};
     } catch (error) {
-        console.log('getError',error)
+        // console.log('getError',error)
     }
     
     var intialState = {};
     if(assumedState){
         intialState = assumedState;
-        console.log('intialState',intialState);
+        // console.log('intialState',intialState);
     }
     const saver = (store) => next => action => {
         let result;

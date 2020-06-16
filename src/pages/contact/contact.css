@@ -84,9 +84,9 @@
   color: #FFFFFF;
   margin-bottom: 50px;
 }
-.contact_location{
+/* .contact_location{
 
-}
+} */
 .contact_location div{
   display: flex;
   align-items: flex-start;
@@ -100,7 +100,6 @@
   font-size: 20px;
   line-height: 40px;
   color: #000000;
-  margin-bottom: 0;
   display: inline;
 }
 @media (max-width: 900px) {

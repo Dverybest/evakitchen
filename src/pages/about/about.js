@@ -11,6 +11,12 @@ const About = () => {
             const backgroundcolor = window.scrollY < 100 ? "transparent" : "#000000";
             setNavColor(backgroundcolor);
         });
+        return ()=>{
+            document.removeEventListener("scroll", () => {
+                const backgroundcolor = window.scrollY < 100 ? "transparent" : "#000000";
+                setNavColor(backgroundcolor);
+            })
+        }
     })
 
     return (

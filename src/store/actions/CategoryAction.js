@@ -1,4 +1,5 @@
-import RequestProcessor from '../../api/RequestProcessor'
+import RequestProcessor from '../../api/RequestProcessor';
+import {ALL_CATEGORIES_KEY} from '../Constants';
 
 export const handleAddCategory = (payload)=>{
 
@@ -23,13 +24,39 @@ export const handleAddCategory = (payload)=>{
 export const handleGetCategory = () => {
 
     return new Promise((resolve, reject) => {
+
         let requestProcessor = new RequestProcessor();
+
         requestProcessor.sendGet('/category/getallcategories').then(result => {
             //  console.log("get cat res", result)
+
             resolve({ success: result.success, data: result.data });
+
         }).catch(error => {
             //  console.log("get cat error", error)
-            reject({ success: false, message: error.message })
+
+            reject({ success: false, message: error.message });
+            
+        });
+    });
+}
+
+export const handleGetAllCategory = () => {
+
+    return (dispatch, getState) => new Promise((resolve, reject) => {
+
+        let requestProcessor = new RequestProcessor();
+
+        requestProcessor.sendGet('/category/getallcategories').then(result => {
+
+            dispatch({type:ALL_CATEGORIES_KEY,payload:result.data});
+
+            resolve({ success: result.success, data: result.data });
+
+        }).catch(error => {
+
+            reject({ success: false, message: error.message });
+
         });
     });
 }

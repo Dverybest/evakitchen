@@ -1,18 +1,25 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 import {Link, withRouter } from 'react-router-dom';
-
-const NavBar = ({navColor}) => {
-
+import { connect } from 'react-redux';
+import {handleGetAllCategory} from '../../store/actions/CategoryAction';
+const NavBar = (props) => {
+    const { navColor } = props;
+    const [categories, setCategories] = useState([...props.categories]);
+   
+    useEffect(()=>{
+        if(!categories.length){
+            props.handleGetAllCategory()
+            .then(result=>{
+                setCategories(result.data)
+            })
+        }
+    })
     const openNav=()=> {
-
         document.getElementById("mySidenav").style.width = "250px";
     }
 
     const closeNav=() =>{
         document.getElementById("mySidenav").style.width = "0";
-    }
-    const handleNavClick =(e,name)=>{
-
     }
     return (
         <div>
@@ -31,9 +38,13 @@ const NavBar = ({navColor}) => {
                         <div className="dropdown">
                             <button className="dropbtn">CATEGORIES <i className="fa fa-caret-down"></i></button>
                             <div className="dropdown-content">
-                                <a href="/" onClick={(e) => handleNavClick(e, 'view-category')}>View Category</a>
-                                <a href="/" onClick={(e) => handleNavClick(e, 'add-category')}>Add Category</a>
-
+                                {
+                                   categories.map((cat,index)=>{
+                                       return(
+                                           <Link key={`categories/${index}`} to={`/categories/${cat.name}`}>{cat.name}</Link>
+                                       )
+                                   })
+                                }
                             </div>
                         </div>
                     </li>
@@ -54,8 +65,13 @@ const NavBar = ({navColor}) => {
                 <div className="dropdown">
                     <button className="dropbtn">CATEGORIES <i className="fa fa-caret-down"></i></button>
                     <div className="dropdown-content">
-                        <a href="/" onClick={(e) => handleNavClick(e, 'view-category')}>View Category</a>
-                        <a href="/" onClick={(e) => handleNavClick(e, 'add-category')}>Add Category</a>
+                        {
+                            categories.map((cat, index) => {
+                                return (
+                                    <Link key={`categories/${index}`} to={`/categories/${cat.name}`}>{cat.name}</Link>
+                                )
+                            })
+                        }
 
                     </div>
                 </div>
@@ -63,4 +79,11 @@ const NavBar = ({navColor}) => {
         </div>
     )
 }
-export default withRouter(NavBar);
+
+const mapStateToProps = (state) => {
+    return {
+        categories: state.category.categories,
+    }
+}
+
+export default connect(mapStateToProps, {handleGetAllCategory})(withRouter(NavBar));

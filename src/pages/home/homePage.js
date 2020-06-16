@@ -1,30 +1,38 @@
 import React, { useEffect, useState, } from 'react';
 import Navbar from '../components/NavBar';
 import cook from '../../assets/cook.png';
-import soup from '../../assets/img3.jpg';
 import './homePage.css';
 import { Article } from '../components/articles/Articles';
+import { handleGetAllRecipes } from '../../store/actions/RecipeAction'
 import Footer from '../components/Footer';
-import Category from './components/Category';
-
 
 const HomePage = (props) => {
-
     const [navColor, setNavColor] = useState('transparent');
-
-    const [articles, setArticles] = useState([
-        { source: soup, title: 'Egusi Soup', discription: '' },
-        { source: "https://www.youtube.com/embed/tgbNymZ7vqY", title: 'White Egusi Soup', discription: '' },
-        { source: "https://homepages.cae.wisc.edu/~ece533/images/airplane.png", title: 'Bitter leaf Egusi Soup', discription: '' },
-    ])
+    const [isLoading, setIsLoading] = useState(true)
+    const [articles, setArticles] = useState([])
 
     useEffect(() => {
+        handleGetAllRecipes().then(result => {
+            console.log('result', result)
+            setIsLoading(false);
+            setArticles(result.data)
+        }).catch(error => {
+            setIsLoading(false);
+        })
+
+    }, [])
+    useEffect(()=>{
         document.addEventListener("scroll", () => {
             const backgroundcolor = window.scrollY < 100 ? "#ff000000" : "#000000";
             setNavColor(backgroundcolor);
         });
+        return () => {
+            document.removeEventListener("scroll", () => {
+                const backgroundcolor = window.scrollY < 100 ? "transparent" : "#000000";
+                setNavColor(backgroundcolor);
+            })
+        }
     })
-
     return (
         <div className="Home container-fluid px-0">
             <Navbar navColor={navColor} />
@@ -35,42 +43,55 @@ const HomePage = (props) => {
             </div>
             <main>
                 <div className="container mt-3">
+                    {
+                        isLoading ? (
+                            <div className="d-flex justify-content-center align-items-center" style={{height:'30vh'}}>
+                                <div className="spinner-border text-primary"></div>
+                            </div>
+                        ) : (
+                            <div>
+                                    <h2>Recent Recipes</h2>
+                                    <p className="sub_heading">Our most recently added recipes</p>
+                                    <div className="row px-0 mx-0">
+                                        <div className="">
+
+                                            <div>
+                                                {
+                                                    articles.map((art, index) => {
+                                                        // console.log("art",art)
+                                                        return (
+                                                            <Article key={`article${index}`} mediaUrl={art.imageurl || art.videourl} 
+                                                            title={art.title} id={index} link={art._id} history={props.history} />
+                                                        )
+                                                    })
+                                                }
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <h2>Popular Recipes</h2>
+                                    <p className="sub_heading">Our most viewed recipes</p>
+                                    <div className="row px-0 mx-0">
+                                        <div className="">
+
+                                            <div>
+                                                {
+                                                    articles.map((art, index) => {
+                                                        // console.log("art",art)
+                                                        return (
+                                                            <Article key={`article${index}`} mediaUrl={art.imageurl || art.videourl} title={art.title} id={index} link={'#'} />
+                                                        )
+                                                    })
+                                                }
+                                            </div>
+
+                                        </div>
+                                    </div>
+                            </div>
+                        )
+                    }
                     
-                    <h2>Recent Recipes</h2>
-                    <p className="sub_heading">Our most recently added recipes</p>
-                    <div className="row px-0 mx-0">
-                        <div className="">
-                            <div>
-                                {
-                                    articles.map((art, index) => {
-                                        return (
-                                            <Article key={`article${index}`} source={art.source} title={art.title} id={index} link={'#'} />
-                                        )
-                                    })
-                                }
-                            </div>
-                        </div>
-                        {/* <div className="col-sm-3">
-                            <Category/>
-                        </div> */}
-                    </div>
-
-                    <h2>Popular Recipes</h2>
-                    <p className="sub_heading">Our most viewed recipes</p>
-                    <div className="row px-0 mx-0">
-                        <div className="">
-                            <div>
-                                {
-                                    articles.map((art, index) => {
-                                        return (
-                                            <Article key={`article${index}`} source={art.source} title={art.title} id={index} link={'#'} />
-                                        )
-                                    })
-                                }
-                            </div>
-                        </div>
-
-                    </div>
                 </div>
             </main>
             <Footer />

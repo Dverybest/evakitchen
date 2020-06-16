@@ -290,7 +290,7 @@ const ViewCategory = ({ view, categories, error, isLoading }) => {
     )
 }
 const mapStateToProps = (state) => {
-    console.log('state', state);
+    // console.log('state', state);
     return {
         userDetails: state.auth.userDetails,
     }

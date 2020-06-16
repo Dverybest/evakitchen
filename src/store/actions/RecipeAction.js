@@ -20,15 +20,15 @@ export const handleAddRecipe = (payload) => {
     });
 }
 
-export const handleGetCategory = () => {
+export const handleGetAllRecipes = () => {
 
-    return (dispatch, getState) => new Promise((resolve, reject) => {
+    return  new Promise((resolve, reject) => {
         let requestProcessor = new RequestProcessor();
-        requestProcessor.sendGet('/category/getallcategories').then(result => {
-            // console.log("get cat res", result)
+        requestProcessor.sendGet('/post/getallpost').then(result => {
+            // console.log("get post res", result)
             resolve({ success: result.success, data: result.data });
         }).catch(error => {
-            // console.log("get cat error", error)
+            console.log("get post error", error)
             reject({ success: false, message: error.message })
         });
     });

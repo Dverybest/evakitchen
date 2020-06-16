@@ -3,6 +3,7 @@ import homePage from './pages/home/homePage'
 import contact from './pages/contact/contact'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import about from './pages/about/about';
+import readMore from './pages/readMore/readMore';
 import adminLogin from './pages/admin/auth/adminLogin';
 import adminDashboard from './pages/admin/dashboard/adminDashboard';
 
@@ -14,6 +15,7 @@ const App = () => {
           <Route exact path='/admin' component={adminLogin} />
           <Route exact path='/contact-us' component={contact} />
           <Route exact path='/about-us' component={about} />
+          <Route exact path='/read-more/:postId' component={readMore} />
           <Route exact path='/admin-dashboard' component={adminDashboard} />
           <Route exact path='/' component={homePage} />
         </Switch>

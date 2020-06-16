@@ -10,6 +10,13 @@ const Contact = () => {
             const backgroundcolor = window.scrollY < 100 ? "transparent" :  "#000000";
             setNavColor(backgroundcolor);
         });
+
+        return () => {
+            document.removeEventListener("scroll", () => {
+                const backgroundcolor = window.scrollY < 100 ? "transparent" : "#000000";
+                setNavColor(backgroundcolor);
+            })
+        }
     })
     return (
         <div className="contact d-flex flex-column">
