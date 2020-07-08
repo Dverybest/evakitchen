@@ -3,8 +3,9 @@ import Navbar from '../components/NavBar'
 import Footer from '../components/Footer'
 import './readMore.css'
 const ReadMore = (props) => {
-    let mediaUrl = "https://res.cloudinary.com/dwdfhahjx/image/upload/v1590979749/evakitchen/2020-06-01T02:49:08.916Z.jpg";
-    let title = "Egusi Recipe";
+    let { link, title, mediaUrl, id } = props.location.state;
+    // let mediaUrl = "https://res.cloudinary.com/dwdfhahjx/image/upload/v1590979749/evakitchen/2020-06-01T02:49:08.916Z.jpg";
+    // let title = "Egusi Recipe";
     return (
         <div className="read_more">
             <Navbar navColor={'#000'} />

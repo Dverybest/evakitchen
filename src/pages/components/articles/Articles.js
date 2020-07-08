@@ -6,7 +6,10 @@ export const Article = (props) => {
     // console.log("props",props)
     let { link, title, mediaUrl, id } = props;
     const handleReadMoreClick = (e)=>{
-        props.history.push('/read-more/'+link);
+        props.history.push({
+            pathname: '/read-more/' + link,
+            state: { link, title, mediaUrl, id}
+        }); 
     }
     return (
         <div className="article">

@@ -2,12 +2,14 @@
     padding-top: 120px;;
 }
 .read_more .post_media{
-    max-width: 100%;
-    height: auto;
+    max-width: auto;
+    height: 60vh;
     width: 100%;
+    object-fit: contain;
 }
 .read_more .image_holder{
-    max-width: 800px;
+    max-width: auto;
+    height: 60vh;
     margin: auto;
 }
 .read_more .post_title{

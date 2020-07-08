@@ -13,7 +13,6 @@ const HomePage = (props) => {
 
     useEffect(() => {
         handleGetAllRecipes().then(result => {
-            console.log('result', result)
             setIsLoading(false);
             setArticles(result.data)
         }).catch(error => {

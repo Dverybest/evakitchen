@@ -31,6 +31,7 @@
     height: auto;
     max-height:300px;
     width: 100%;
+    object-fit: cover;
 }
 @media (max-width: 900px) {
     .post_title{
